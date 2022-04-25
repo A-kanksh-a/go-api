@@ -8,10 +8,9 @@ import (
 )
 
 func main() {
-
 	r := mux.NewRouter()
 	r.HandleFunc("/hello", helloHandler).Methods(http.MethodGet)
-	http.ListenAndServe(":8080", r)
+	http.ListenAndServeTLS(":8080", "./cert/CA/localhost/localhost.crt", "./cert/CA/localhost/localhost.decrypted.key", r)
 }
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
