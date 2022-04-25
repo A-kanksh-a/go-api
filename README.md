@@ -14,6 +14,8 @@ On another terminal we can curl the API using https
 
 ```
 curl https://localhost:8080/hello --cacert ./cert/CA/CA.pem
+
+`Hello All`
 ```
 ## Steps to change scheme from `http` to `https` using self signed certificate
 
